@@ -13,17 +13,21 @@ Admission number as primary key. A duplicate registration is rejected with a cle
 5. Passwords stored as salted SHA-256 hashes, never as plain text
 6. Form validation, loading states and error messages on every screen
 
-# Tech stack
-Purpose	Package
-Framework	Flutter (Dart)
-Local database (mobile)	sqflite
-Local database (desktop)	sqflite_common_ffi
-Image selection	image_picker
-File storage paths	path_provider, path
-Session storage	shared_preferences
-Password hashing	crypto
+## Tech stack
 
-# Project structure
+| Purpose | Package |
+| --- | --- |
+| Framework | Flutter (Dart) |
+| Local database (mobile) | `sqflite` |
+| Local database (desktop) | `sqflite_common_ffi` |
+| Image selection | `image_picker` |
+| File storage paths | `path_provider`, `path` |
+| Session storage | `shared_preferences` |
+| Password hashing | `crypto` |
+
+## Project structure
+
+```
 lib/
 ├── main.dart                     # App entry point, desktop DB setup, login gate
 ├── models/
@@ -34,6 +38,7 @@ lib/
     ├── login_screen.dart
     ├── register_screen.dart
     └── profile_screen.dart
+```
     
 # How data is stored?
 Everything is stored locally on the device for now.
